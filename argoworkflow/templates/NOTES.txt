@@ -1,0 +1,11 @@
+{{- if .Values.argoCronWorkflows }}
+{{- range $workflow, $ref := .Values.argoCronWorkflows }}
+CronWorkflow {{ $workflow }} ({{ $ref.spec.schedule }}) was deployed
+{{- end }}
+{{- end }}
+
+{{- if .Values.argoWorkflows }}
+{{- range $workflow, $ref := .Values.argoWorkflows }}
+Workflow {{ $workflow }} was deployed
+{{- end }}
+{{- end }}
