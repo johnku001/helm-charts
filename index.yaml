@@ -3,12 +3,12 @@ entries:
   argoworkflow:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-02-09T13:19:09.991235+08:00"
+    created: "2023-02-09T13:22:29.414849+08:00"
     description: A Helm chart for Kubernetes
-    digest: 64bc7885f08cc46878585d1310b88411f2caa88a557a0710d2ac5197df85fcd5
+    digest: bb2dd8055197fb9329415bf079e43df4dfd6a5a5a60ac26bf67892b1b3f7f0d8
     name: argoworkflow
     type: application
     urls:
     - argoworkflow-0.1.0.tgz
     version: 0.1.0
-generated: "2023-02-09T13:19:09.9906+08:00"
+generated: "2023-02-09T13:22:29.414487+08:00"
