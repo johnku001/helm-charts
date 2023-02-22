@@ -1,15 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: CronWorkflow
 metadata:
-  name: {{ .Values.name }}
+  name: {{ required "name must be provided" .Values.name }}
 spec:
-  schedule: '{{ .Values.schedule }}'
+  schedule: '{{ required "schedule must be provided" .Values.schedule }}'
   workflowSpec:
     workflowMetadata:
       labels:
         name: {{ .Values.name }}
     metrics:
       prometheus:
+        - name: exec_duration_gauge         # Metric name (will be prepended with "argo_workflows_")
+          labels: # Labels are optional. Avoid cardinality explosion.
+            - key: name
+              value: "{{ "{{" }}workflow.labels.name{{ "}}" }}"
+          help: "Duration gauge by name"    # A help doc describing your metric. This is required.
+          gauge: # The metric type. Available are "gauge", "histogram", and "counter".
+            value: "{{ "{{" }}workflow.duration{{ "}}" }}"  # The value of your metric. It could be an Argo variable (see variables doc) or a literal value
         - name: fail_count
           help: "Count of execution by fail status"
           labels:
@@ -38,9 +45,9 @@ spec:
               template: template
       - name: template
         container:
-          image: '{{ .Values.image.repository }}:{{ .Values.image.tag }}'
+          image: '{{ required "image.repository must be provided" .Values.image.repository }}:{{ required "image.tag must be provided" .Values.image.tag }}'
           command: [ bundle ]
-          args: [ exec, rake, {{ .Values.rake_command }} ]
+          args: [ exec, rake, {{ required "rake_command must be provided" .Values.rake_command }} ]
           resources: {{- toYaml ( .Values.resources) | nindent 11 }}
           envFrom:
             {{- range .Values.envFrom.configMapRef }}
