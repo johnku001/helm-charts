@@ -1,9 +1,53 @@
-{{- range $workflow, $ref := .Values.argoCronWorkflows }}
 apiVersion: argoproj.io/v1alpha1
 kind: CronWorkflow
 metadata:
-  name: {{ $workflow }}
+  name: {{ .Values.name }}
 spec:
-  {{- toYaml ($ref.spec) | nindent 4 }}
----
-{{- end }}
+  schedule: '{{ .Values.schedule }}'
+  workflowSpec:
+    workflowMetadata:
+      labels:
+        name: {{ .Values.name }}
+    metrics:
+      prometheus:
+        - name: fail_count
+          help: "Count of execution by fail status"
+          labels:
+            - key: name
+              value: "{{ "{{" }}workflow.labels.name{{ "}}" }}"
+            - key: namespace
+              value: "{{ "{{" }}workflow.namespace{{ "}}" }}"
+          when: "{{ "{{" }}status{{ "}}" }} == Failed"       # Emit the metric conditionally. Works the same as normal "when"
+          counter:
+            value: "1"                            # This increments the counter by 1
+        - name: success_count
+          help: "Count of execution by success status"
+          labels:
+            - key: name
+              value: "{{ "{{" }}workflow.labels.name{{ "}}" }}"
+            - key: namespace
+              value: "{{ "{{" }}workflow.namespace{{ "}}" }}"
+          when: "{{ "{{" }}status{{ "}}" }} == Succeeded"       # Emit the metric conditionally. Works the same as normal "when"
+          counter:
+            value: "1"                  # This increments the counter by 1
+    entrypoint: entry
+    templates:
+      - name: entry
+        steps:
+          - - name: step1
+              template: template
+      - name: template
+        container:
+          image: '{{ .Values.image.repository }}:{{ .Values.image.tag }}'
+          command: [ bundle ]
+          args: [ exec, rake, {{ .Values.rake_command }} ]
+          resources: {{- toYaml ( .Values.resources) | nindent 11 }}
+          envFrom:
+            {{- range .Values.envFrom.configMapRef }}
+            - configMapRef:
+                name: {{ . }}
+            {{- end }}
+            {{- range .Values.envFrom.secretRef }}
+            - secretRef:
+                name: {{ . }}
+            {{- end }}
