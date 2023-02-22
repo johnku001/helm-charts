@@ -3,7 +3,17 @@ entries:
   argoworkflow:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-02-22T20:35:09.418774+08:00"
+    created: "2023-02-22T21:04:03.988208+08:00"
+    description: A Helm chart for Kubernetes
+    digest: 20557c874b720a9386adab12997fe8ca6e722f255b9644157b7b4426a4d3223f
+    name: argoworkflow
+    type: application
+    urls:
+    - argoworkflow-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-02-22T21:04:03.987983+08:00"
     description: A Helm chart for Kubernetes
     digest: 6f16b4a3eaf73e8d6f10ca9df4b3a613715512e7b0d5ef9f91a3871ad24928b7
     name: argoworkflow
@@ -13,7 +23,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-02-22T20:35:09.418315+08:00"
+    created: "2023-02-22T21:04:03.986835+08:00"
     description: A Helm chart for Kubernetes
     digest: bb2dd8055197fb9329415bf079e43df4dfd6a5a5a60ac26bf67892b1b3f7f0d8
     name: argoworkflow
@@ -21,4 +31,4 @@ entries:
     urls:
     - argoworkflow-0.1.0.tgz
     version: 0.1.0
-generated: "2023-02-22T20:35:09.412858+08:00"
+generated: "2023-02-22T21:04:03.985012+08:00"
