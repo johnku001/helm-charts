@@ -3,52 +3,62 @@ entries:
   argoworkflow:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-03-02T20:07:00.533327+08:00"
+    created: "2023-04-04T18:20:43.397073+08:00"
     description: A Helm chart for Kubernetes
     digest: 5069dcbce16f68e5f26bf6dcee4afceffc9706f8a57d1573b138d6313f7315f1
     name: argoworkflow
     type: application
     urls:
-    - argoworkflow-0.1.4.tgz
+    - https://shoplineapp.github.io/helm-charts/argoworkflow-0.1.4.tgz
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-03-02T20:07:00.533118+08:00"
+    created: "2023-04-04T18:20:43.396977+08:00"
     description: A Helm chart for Kubernetes
     digest: 737e367768c0655c63fdcd3b3b55b2454c99088ee1b70780af6abbea302edc41
     name: argoworkflow
     type: application
     urls:
-    - argoworkflow-0.1.3.tgz
+    - https://shoplineapp.github.io/helm-charts/argoworkflow-0.1.3.tgz
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-03-02T20:07:00.53275+08:00"
+    created: "2023-04-04T18:20:43.396878+08:00"
     description: A Helm chart for Kubernetes
     digest: 20557c874b720a9386adab12997fe8ca6e722f255b9644157b7b4426a4d3223f
     name: argoworkflow
     type: application
     urls:
-    - argoworkflow-0.1.2.tgz
+    - https://shoplineapp.github.io/helm-charts/argoworkflow-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-03-02T20:07:00.531587+08:00"
+    created: "2023-04-04T18:20:43.396783+08:00"
     description: A Helm chart for Kubernetes
     digest: 6f16b4a3eaf73e8d6f10ca9df4b3a613715512e7b0d5ef9f91a3871ad24928b7
     name: argoworkflow
     type: application
     urls:
-    - argoworkflow-0.1.1.tgz
+    - https://shoplineapp.github.io/helm-charts/argoworkflow-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-03-02T20:07:00.530989+08:00"
+    created: "2023-04-04T18:20:43.396677+08:00"
     description: A Helm chart for Kubernetes
     digest: bb2dd8055197fb9329415bf079e43df4dfd6a5a5a60ac26bf67892b1b3f7f0d8
     name: argoworkflow
     type: application
     urls:
-    - argoworkflow-0.1.0.tgz
+    - https://shoplineapp.github.io/helm-charts/argoworkflow-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-02T20:07:00.529736+08:00"
+  cronjob:
+  - apiVersion: v1
+    appVersion: 0.0.1
+    created: "2023-04-04T18:20:43.397241+08:00"
+    description: Helm chart with simple cronjob template
+    digest: 2ab20cf1cda2542f2757774ead30ffff030cb7e5cebad6d8ca09f796addc3f69
+    name: cronjob
+    urls:
+    - https://shoplineapp.github.io/helm-charts/cronjob/cronjob-0.3.0.tgz
+    version: 0.3.0
+generated: "2023-04-04T18:20:43.396458+08:00"
