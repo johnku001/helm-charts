@@ -13,10 +13,10 @@ image:
 
 newRelic:
   image:
-    repository: null
+    repository: 
     tag: latest
-    appName: null
-    licenseKey: null
+    appName: 
+    licenseKey: 
   
 
 
