@@ -1,6 +1,6 @@
 schedule: "0 * * * *"
 
-startingDeadlineSeconds: {}
+startingDeadlineSeconds: null
 
 job:
   retries: 1
