@@ -11,12 +11,10 @@ annotations: {}
 image:
   tag: latest
 
-newRelic:
-  image:
-    repository: ""
-    tag: latest
-    appName: ""
-    licenseKey: ""
+exitNotifications:
+  slackApp: {}
+  newRelic: {}
+  healthcheckIo: {}
   
 
 
