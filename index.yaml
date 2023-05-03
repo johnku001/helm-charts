@@ -3,7 +3,7 @@ entries:
   argoworkflow:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-05-02T17:29:52.314967+08:00"
+    created: "2023-05-03T15:23:09.59885+08:00"
     description: A Helm chart for Kubernetes
     digest: 5069dcbce16f68e5f26bf6dcee4afceffc9706f8a57d1573b138d6313f7315f1
     name: argoworkflow
@@ -13,7 +13,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-05-02T17:29:52.314453+08:00"
+    created: "2023-05-03T15:23:09.598683+08:00"
     description: A Helm chart for Kubernetes
     digest: 737e367768c0655c63fdcd3b3b55b2454c99088ee1b70780af6abbea302edc41
     name: argoworkflow
@@ -23,7 +23,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-05-02T17:29:52.314222+08:00"
+    created: "2023-05-03T15:23:09.59846+08:00"
     description: A Helm chart for Kubernetes
     digest: 20557c874b720a9386adab12997fe8ca6e722f255b9644157b7b4426a4d3223f
     name: argoworkflow
@@ -33,7 +33,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-05-02T17:29:52.313998+08:00"
+    created: "2023-05-03T15:23:09.598245+08:00"
     description: A Helm chart for Kubernetes
     digest: 6f16b4a3eaf73e8d6f10ca9df4b3a613715512e7b0d5ef9f91a3871ad24928b7
     name: argoworkflow
@@ -43,7 +43,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-05-02T17:29:52.313809+08:00"
+    created: "2023-05-03T15:23:09.598033+08:00"
     description: A Helm chart for Kubernetes
     digest: bb2dd8055197fb9329415bf079e43df4dfd6a5a5a60ac26bf67892b1b3f7f0d8
     name: argoworkflow
@@ -54,11 +54,11 @@ entries:
   cronjob:
   - apiVersion: v1
     appVersion: 0.0.1
-    created: "2023-05-02T17:29:52.315334+08:00"
+    created: "2023-05-03T15:23:09.599151+08:00"
     description: Helm chart with simple cronjob template
-    digest: c2e2e335e738cb76c8cd86fa0ad4d1869cb934cf4e4f8e53c1beaa02ffc9d38d
+    digest: 2afa7768a070c5a1683f11dc409894726b68f5b2f14477b4e68fde14272e4ee4
     name: cronjob
     urls:
     - cronjob/cronjob-0.3.0.tgz
     version: 0.3.0
-generated: "2023-05-02T17:29:52.313107+08:00"
+generated: "2023-05-03T15:23:09.597157+08:00"
